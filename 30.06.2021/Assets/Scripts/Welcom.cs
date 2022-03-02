@@ -74,7 +74,7 @@ public class Welcom : MonoBehaviour
 
 
 
-       // PlayerPrefs.SetInt("LastMission", missionID);
+        PlayerPrefs.SetInt("LastMission", missionID);
 
         if (PlayerPrefs.GetInt("SELECTED") == 0)
         {
