@@ -106,6 +106,7 @@ public class PlayerChoose : MonoBehaviour
         }
         Save();
         updateswap();
+     //  flCam.hyo = false;
         flCam.First_touch = false;
     }
 

@@ -72,11 +72,14 @@ public Vector2  minPos, maxPos;
             return;
         }
         Move();
-      
-        Zoom();
+
+       // Zoom();
+       
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPos.x, maxPos.x),
                                        Mathf.Clamp(transform.position.y, minPos.y, maxPos.y),
                                        Mathf.Clamp(transform.position.z, transform.position.z, transform.position.z));
+
+      
     }
 
     void Zoom()
@@ -85,7 +88,7 @@ public Vector2  minPos, maxPos;
          // cam.fieldOfView =Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, minZoom, Time.deltaTime );
 
-        
+       // CameraViewpoinHandler.Instance.UnitsSize = Mathf.Lerp(cam.orthographicSize, minZoom, Time.deltaTime);
     }
 
     float GetGreatestDistance()

@@ -35,15 +35,18 @@ public class MoveCanCongTac : MonoBehaviour
                 audioS.clip = cancongtac;
                 audioS.Play();
 
-                _trParent.eulerAngles = new Vector3(0, 0, -40);
-               // _trParent.rotation *= Quaternion.Euler(0, 0, -1);
+               //_trParent.eulerAngles = new Vector3(0, 0, -40);
+                //float angle = Mathf.Atan2(_trParent.y, joystick.joysiickVec.x) * Mathf.Rad2Deg;
+                Quaternion target = Quaternion.Euler(0, 0, -40);
+                _trParent.rotation = Quaternion.Lerp(_trParent.rotation, target, Time.deltaTime);
             }
             else
             {
                 audioS.clip = cancongtac;
                 audioS.Play();
-                 _trParent.eulerAngles = new Vector3(0, 0, 40);
-               // _trParent.rotation *= Quaternion.Euler(0, 0, 1);
+               //  _trParent.eulerAngles = new Vector3(0, 0, 40);
+                Quaternion target = Quaternion.Euler(0, 0, 40);
+                _trParent.rotation = Quaternion.Lerp(_trParent.rotation, target, Time.deltaTime);
             }
         }
         if (_trParent.rotation.z > 0)
