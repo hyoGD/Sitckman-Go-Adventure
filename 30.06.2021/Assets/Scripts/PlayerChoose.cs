@@ -60,9 +60,6 @@ public class PlayerChoose : MonoBehaviour
             Load();
         }
         updateswap();
-
-
-
     }
 
     // Update is called once per frame
@@ -77,15 +74,13 @@ public class PlayerChoose : MonoBehaviour
         SwapKey();
         HandPause();
         StartCoroutine(NexMapp2xx());
-
-
     }
-
 
     public void Load()
     {
         choose_Player = PlayerPrefs.GetInt("choose_Player") == 1;
     }
+
     public void Save()
     {
         PlayerPrefs.SetInt("choose_Player", choose_Player ? 1 : 0);
@@ -122,7 +117,6 @@ public class PlayerChoose : MonoBehaviour
 
             // _player2.StopMoving();
             flCam.Check = true;    //check camera
-
         }
         else
         {
@@ -134,10 +128,8 @@ public class PlayerChoose : MonoBehaviour
 
             //_player1.StopMoving();
             flCam.Check = false;    //check camera
-
         }
     }
-
 
     private void SwapKey()      ////click key
     {
@@ -163,10 +155,7 @@ public class PlayerChoose : MonoBehaviour
         }
         Save();
         updateswap();
-
     }
-
-
 
     public void home()
     {
@@ -200,7 +189,7 @@ public class PlayerChoose : MonoBehaviour
 
     public void Reset(int sceneID)
     {
-        Debug.LogWarning("Reset--------- " + (AdsManager.Instance == null ? "NULL" : "Eo NULL"));
+      //  Debug.LogWarning("Reset--------- " + (AdsManager.Instance == null ? "NULL" : "Eo NULL"));
         //AdsManager.Instance.ShowInters((b) =>
         //{
         //    if (b)
@@ -212,7 +201,7 @@ public class PlayerChoose : MonoBehaviour
         //});
         AdsManager.Instance.ShowInters();
 
-        Debug.LogError("Reset");
+       // Debug.LogError("Reset");
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneID);
     }
@@ -251,7 +240,7 @@ public class PlayerChoose : MonoBehaviour
         //    }
         //});
         AdsManager.Instance.ShowInters();
-        Debug.LogError("Nextmap");
+      //  Debug.LogError("Nextmap");
         SceneManager.LoadScene(Map2);
     }
 
@@ -263,7 +252,7 @@ public class PlayerChoose : MonoBehaviour
             {
                 _player1.Revive();
                 _player2.Revive();
-                Debug.LogWarning("Revive");
+              //  Debug.LogWarning("Revive");
             }
 
 
@@ -333,8 +322,6 @@ public class PlayerChoose : MonoBehaviour
         rightBtn_hight.enabled = false;
         rightBtn_low.enabled = true;
     }
-
-
 }
 
 

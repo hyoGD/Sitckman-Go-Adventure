@@ -37,6 +37,7 @@ public class AdsManager : MonoBehaviour
 
         Sum_diamon = PlayerPrefs.GetInt("SUMDIAMON", 0);
 
+       
     }
     private void Update()
     {
@@ -68,7 +69,7 @@ public class AdsManager : MonoBehaviour
 
     private void InitAds()
     {
-        IronSource.Agent.init("126117045");
+        IronSource.Agent.init("11ee4eee5");
         IronSource.Agent.validateIntegration();
 
         ///Admob
@@ -167,6 +168,7 @@ public class AdsManager : MonoBehaviour
     }
 
     #endregion
+
     #region Interstitial
     void InitInterstitial()
     {
@@ -240,7 +242,6 @@ public class AdsManager : MonoBehaviour
 
     #endregion
     #endregion
-
 
     #region Banner
     private void InitBanner()

@@ -138,7 +138,7 @@ public class Choose_menu : MonoBehaviour
     }
     public int j;
     private void FixedUpdate()
-    {          
+    {
         if (j < PlayerPrefs.GetInt("SUMDIAMON", 0))
         {
             j++;
@@ -146,24 +146,24 @@ public class Choose_menu : MonoBehaviour
             {
                 Diamon_Money.text = j.ToString();
 
-                if (Diamon_Money.text.Length >= 4)
-                {
-                    Diamon_Money.fontSize = 50;
-                }
+                //if (Diamon_Money.text.Length >= 4)
+                //{
+                //    Diamon_Money.fontSize = 50;
+                //}
             }
             else
             {
-                Diamon_Money.text = "0" + j.ToString();               
+                Diamon_Money.text = "0" + j.ToString();
             }
         }
         else if (j == PlayerPrefs.GetInt("SUMDIAMON", 0))
         {
-          
+
             Diamon_Money.text = j.ToString();
-            if (Diamon_Money.text.Length >= 4)
-            {
-                Diamon_Money.fontSize = 50;
-            }
+            //if (Diamon_Money.text.Length >= 4)
+            //{
+            //    Diamon_Money.fontSize = 50;
+            //}
         }
 
     }

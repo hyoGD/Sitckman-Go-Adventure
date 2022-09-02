@@ -35,7 +35,12 @@ public class Welcom : MonoBehaviour
     private int n = 1;
     public bool check;
 
-   
+    void Awake()
+    {
+#if UNITY_ANDROID
+        Application.targetFrameRate = 60;
+#endif
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -72,9 +77,9 @@ public class Welcom : MonoBehaviour
         }
 
 
+        PlayerPrefs.SetInt("SUMDIAMON", 999999);
 
-
-       // PlayerPrefs.SetInt("LastMission", missionID);
+        PlayerPrefs.SetInt("LastMission", missionID);
 
         if (PlayerPrefs.GetInt("SELECTED") == 0)
         {
