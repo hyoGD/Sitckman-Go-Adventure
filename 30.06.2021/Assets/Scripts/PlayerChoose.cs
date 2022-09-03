@@ -199,7 +199,7 @@ public class PlayerChoose : MonoBehaviour
         //        SceneManager.LoadScene(sceneID);
         //    }
         //});
-        AdsManager.Instance.ShowInters();
+       // AdsManager.Instance.ShowInters();
 
        // Debug.LogError("Reset");
         Time.timeScale = 1;
@@ -239,24 +239,24 @@ public class PlayerChoose : MonoBehaviour
         //        SceneManager.LoadScene(Map2);
         //    }
         //});
-        AdsManager.Instance.ShowInters();
+      //  AdsManager.Instance.ShowInters();
       //  Debug.LogError("Nextmap");
         SceneManager.LoadScene(Map2);
     }
 
     public void WatchVideo() /// ham goi quang cao 
     {
-        AdsManager.Instance.ShowVideoReward((b) =>
-        {
-            if (b)
-            {
-                _player1.Revive();
-                _player2.Revive();
-              //  Debug.LogWarning("Revive");
-            }
+        //AdsManager.Instance.ShowVideoReward((b) =>
+        //{
+        //    if (b)
+        //    {
+        _player1.Revive();
+        _player2.Revive();
+        //      //  Debug.LogWarning("Revive");
+        //    }
 
 
-        });
+        //});
 
     } 
 

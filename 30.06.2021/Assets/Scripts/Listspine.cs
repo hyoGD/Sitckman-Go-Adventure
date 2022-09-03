@@ -347,16 +347,14 @@ public class Listspine : MonoBehaviour
         audioS.clip = clik;
         audioS.Play();
 
-        AdsManager.Instance.ShowVideoReward((b) =>
-        {
-            if (b)
-            {
+        //AdsManager.Instance.ShowVideoReward((b) =>
+        //{
+        //    if (b)
+        //    {
                 Tried();
-                Debug.LogWarning("Tried");
-            }
-        });
-
-
+        //        Debug.LogWarning("Tried");
+        //    }
+        //});
     }
 
     private void Tried()

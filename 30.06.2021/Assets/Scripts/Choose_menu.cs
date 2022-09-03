@@ -39,10 +39,10 @@ public class Choose_menu : MonoBehaviour
     void Start()
     {
         int lastMission = GameSetting.GetLastMission;
-        int updateDiamon = PlayerPrefs.GetInt("SUMDIAMON", 0);
+        //int updateDiamon = PlayerPrefs.GetInt("SUMDIAMON", 0);
 
-        j = updateDiamon;
-        Diamon_Money.text = j.ToString();
+        //j = updateDiamon;
+        Diamon_Money.text = $"{PlayerPrefs.GetInt("SUMDIAMON", 0):00}";
         audioS = GetComponent<AudioSource>();
 
 
@@ -136,35 +136,40 @@ public class Choose_menu : MonoBehaviour
         }
         
     }
-    public int j;
+  //  public int j;
     private void FixedUpdate()
     {
-        if (j < PlayerPrefs.GetInt("SUMDIAMON", 0))
-        {
-            j++;
-            if (j >= 10)
-            {
-                Diamon_Money.text = j.ToString();
+        //if (j < PlayerPrefs.GetInt("SUMDIAMON", 0))
+        //{
+        //    j++;
+        //    //if (j >= 10)
+        //    //{
+        //    //    Diamon_Money.text = j.ToString();
 
-                //if (Diamon_Money.text.Length >= 4)
-                //{
-                //    Diamon_Money.fontSize = 50;
-                //}
-            }
-            else
-            {
-                Diamon_Money.text = "0" + j.ToString();
-            }
-        }
-        else if (j == PlayerPrefs.GetInt("SUMDIAMON", 0))
-        {
+        //    //    //if (Diamon_Money.text.Length >= 4)
+        //    //    //{
+        //    //    //    Diamon_Money.fontSize = 50;
+        //    //    //}
+        //    //}
+        //    //else
+        //    //{
+        //    //    Diamon_Money.text = "0" + j.ToString();
+        //    //}
+        //    Diamon_Money.text = $"{j:00}";
+        //    if (Diamon_Money.text.Length >= 4)
+        //    {
+        //        Diamon_Money.fontSize = 50;
+        //    }
+        //}
+        //else if (j == PlayerPrefs.GetInt("SUMDIAMON", 0))
+        //{
 
-            Diamon_Money.text = j.ToString();
-            //if (Diamon_Money.text.Length >= 4)
-            //{
-            //    Diamon_Money.fontSize = 50;
-            //}
-        }
+        //    Diamon_Money.text = j.ToString();
+        //    //if (Diamon_Money.text.Length >= 4)
+        //    //{
+        //    //    Diamon_Money.fontSize = 50;
+        //    //}
+        //}
 
     }
     public void Skin()      
@@ -370,14 +375,14 @@ public class Choose_menu : MonoBehaviour
 
     public void Donate_Dianon()
     {
-        AdsManager.Instance.ShowVideoReward((b) =>
-        {
-            if (b)
-            {
-                Donated();
-                Debug.LogWarning("Donated");
-            }
-        });
+        //AdsManager.Instance.ShowVideoReward((b) =>
+        //{
+        //    if (b)
+        //    {
+        Donated();
+        //        Debug.LogWarning("Donated");
+        //    }
+        //});
     }
 
     private void Donated()
