@@ -1491,7 +1491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60812688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.121077, y: 1.754081, z: 454.40045}
+  m_LocalPosition: {x: 2.121077, y: 1.754081, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11922,7 +11922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383027482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7334659, y: 0.31075302, z: -6.1335096}
+  m_LocalPosition: {x: 0.7334659, y: 0.31075302, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11941,7 +11941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vRevive: {x: 0, y: 0, z: 0}
-  Sum_diamon: 9999999
+  traped: 0
 --- !u!1 &383442662
 GameObject:
   m_ObjectHideFlags: 0
@@ -13702,7 +13702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -40.40912, y: -20.703796}
+  m_AnchoredPosition: {x: -40.40912, y: -20.703735}
   m_SizeDelta: {x: -835.31006, y: -257.8675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425289979
@@ -47443,7 +47443,6 @@ MonoBehaviour:
     Bought: 0
     checkLv: 0
   Diamon_Money: {fileID: 378538359}
-  j: 0
   mod: 0
   s: 5
   selected: 0
@@ -47455,7 +47454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548743569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17160946, y: -1.3677608, z: -12.3857975}
+  m_LocalPosition: {x: 0.17160946, y: -1.3677608, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
