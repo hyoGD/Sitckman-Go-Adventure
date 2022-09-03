@@ -12,27 +12,15 @@ public class Run_time : MonoBehaviour
     public MoveAni pl1, pl2;
     public Vector2 V_pl1, V_pl2;
     private bool Over_Time = false;
+
     private void Start()
     {
         Seconds.text = current_time.ToString();
         minutes.text = "0" + late.ToString() + ":";
-
         V_pl1 = player1.transform.position;
-
         V_pl2 = player2.transform.position;
-
-       
     }
-    //private void OnDisable()
-    //{
-
-    //    if (AdsManager.Instance != null)
-    //    {
-    //        AdsManager.Instance.acVideo_timeUp -= TimeUp;
-    //        Debug.Log("turn off TimeUp");
-    //    }
-    //}                              
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -41,8 +29,6 @@ public class Run_time : MonoBehaviour
             current_time -= Time.deltaTime;
             if (current_time < 10)
             {
-
-
                 Seconds.text = "0" + current_time.ToString();
 
             }
@@ -50,7 +36,6 @@ public class Run_time : MonoBehaviour
             {
                 Seconds.text = current_time.ToString();
             }
-
 
             if (current_time < 0.1f)
             {
@@ -72,20 +57,19 @@ public class Run_time : MonoBehaviour
         {
             Over_Time = true;
           Panel_gameOver.SetActive(true);
-         
         }
     }
 
     public void WatachVideo()
     {
-        AdsManager.Instance.ShowVideoReward((b) =>
-        {
-            if (b)
-            {
+        //AdsManager.Instance.ShowVideoReward((b) =>
+        //{
+        //    if (b)
+        //    {
                 TimeUp();
-                Debug.LogWarning("TimeUp");
-            }
-        });
+        //        Debug.LogWarning("TimeUp");
+        //    }
+        //});
     }
 
     private void TimeUp()
